@@ -1,0 +1,34 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Preserve_Order">
+    
+    <listeners>
+    <listener class-name="listnersTestPack.MyTestNGListners" />
+  </listeners>
+    
+    
+    <parameter name="One" value="See"></parameter>
+    <parameter name="Two" value="sec"></parameter>
+    <test name="preserve Od" preserve-order="true">
+	    <classes>
+	        <!-- <class name="preserve.ClassOne">
+	            <methods>
+	                
+	                <include name="fourth"></include>
+	                <include name="third"></include>
+	                <include name="second"></include>
+	                <include name="first"></include>
+	                <include name="dataProviderParameters"></include>
+	                
+	            </methods>
+	        </class>
+	        <class name="preserve.ClassTwo">
+	        </class>
+	        <class name="preserve.ClassThree">
+	            
+	        </class> -->
+	        <class name="otherAll.ClassLevelAnnotations"></class>
+	        
+	    </classes>
+    </test>
+    
+</suite>

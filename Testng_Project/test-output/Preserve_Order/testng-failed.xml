@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Preserve_Order]">
+  <parameter name="One" value="See"/>
+  <parameter name="Two" value="sec"/>
+  <listeners>
+    <listener class-name="listnersTestPack.MyTestNGListners"/>
+  </listeners>
+  <test name="preserve Od(failed)">
+    <classes>
+      <class name="preserve.ClassOne">
+        <parameter name="" value=""/>
+        <methods>
+          <include name="dataProviderParameters"/>
+        </methods>
+      </class> <!-- preserve.ClassOne -->
+    </classes>
+  </test> <!-- preserve Od(failed) -->
+</suite> <!-- Failed suite [Preserve_Order] -->
