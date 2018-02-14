@@ -8,8 +8,8 @@ public class BaseClass {
 	
 	@BeforeSuite
 	public void base(){
-		
-		data.dataProviderGetData("ManyUsers");
+		data=new ExcelClass(System.getProperty("user.dir")+"/src/excelFiles/login.xlsx");
+		//data.dataProviderGetData("ManyUsers");
 		
 	}
 

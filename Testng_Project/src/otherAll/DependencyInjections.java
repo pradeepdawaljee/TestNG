@@ -20,10 +20,15 @@ public class DependencyInjections {
 		
 	}
 	
-	@Test
+	@Test(dependsOnGroups="group1")
 	public void test(){
 		System.out.println("Test DependencyInjections");
 		Assert.assertTrue(false);
+	}
+	
+	@Test(groups="group1")
+	public void test2(){
+		System.out.println("Test2 DependencyInjections");
 	}
 	
 	@AfterMethod
@@ -39,7 +44,7 @@ public class DependencyInjections {
 			System.out.println("Test Skipped, testname="+result.getName());
 		}
 		
-		System.out.println(result.SKIP);
+		//System.out.println(result.SKIP);
 		
 		switch(result.getStatus()){
 		
