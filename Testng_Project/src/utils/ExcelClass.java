@@ -254,8 +254,7 @@ public class ExcelClass {
 
 
 	public Object[][] dataProviderGetData(String sheetName){
-
-
+		
 		sh=wb.getSheet(sheetName);
 		int totalRows=totalNumberOfRowsInSheet(sheetName);
 		int totalCols=totalNumberOfColumns(sheetName,1);
@@ -267,15 +266,12 @@ public class ExcelClass {
 			for(int cols=0;cols<totalCols;cols++){
 				
 				data[rows][cols]=sh.getRow(rows+1).getCell(cols).toString();
-				//data[rows][cols]="sd";
-				//System.out.println("data["+rows+"]["+cols+"]= "+data[rows][cols]);
 			}
 			
 		}
-		//System.out.println(data);
+		
 		return data;
 		
-
 	}
 	
 
