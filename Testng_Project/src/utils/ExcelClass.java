@@ -127,7 +127,7 @@ public class ExcelClass {
 			return "";
 		}
 
-		row=sh.getRow(rowNum-1);
+		/*row=sh.getRow(rowNum-1);
 		if(row==null){
 			return "";
 		}
@@ -135,14 +135,59 @@ public class ExcelClass {
 		if(cell==null){
 			return "";
 		}
-		/*//System.out.println("cell.getCellType()="+cell.getCellType());
+		//System.out.println("cell.getCellType()="+cell.getCellType());
 		System.out.println("cell.getCellType()="+cell.CELL_TYPE_NUMERIC);
 		System.out.println("cell.getCellType()="+cell.CELL_TYPE_STRING);
 		System.out.println("cell.getCellType()="+cell.CELL_TYPE_FORMULA);
 		System.out.println("cell.getCellType()="+cell.CELL_TYPE_BLANK);
 		System.out.println("cell.getCellType()="+cell.CELL_TYPE_BOOLEAN);
-		System.out.println("cell.getCellType()="+cell.CELL_TYPE_ERROR);*/
+		System.out.println("cell.getCellType()="+cell.CELL_TYPE_ERROR);
 		//System.out.println("cell.getCellTypeEnum()="+cell.getCellTypeEnum());
+		switch(cell.getCellType()){		
+		case 0:
+			return String.valueOf(cell.getNumericCellValue());
+		case 1:
+			return cell.getStringCellValue();
+		case 2:
+			//HSSFDate    Have to work on this further
+			Calendar cal=Calendar.getInstance();
+			cal.getTime();
+			return cell.getCellFormula();
+		case 3:
+			return "";
+		case 4:
+			return String.valueOf(cell.getBooleanCellValue());
+		case 5:
+			return String.valueOf(cell.getErrorCellValue());
+		default:
+			return "";
+		}
+*/
+		
+		return getCellData(sheetName,rowNum,colNum);
+		
+	}
+
+	public String getCellData(String sheetName,int rowNum,int colNum) throws Exception{
+		//String path=System.getProperty("user.dir")+"/src/main/resources/excelFiles/login.xlsx";
+		fis=new FileInputStream(path);
+		wb=WorkbookFactory.create(fis);
+		//wb.getNumberOfSheets();
+		sh=wb.getSheet(sheetName);
+		if(rowNum<=0){
+			return "";
+		}
+		row=sh.getRow(rowNum-1);
+		if(row==null){
+			return "";
+		}
+		if(colNum==-1){
+			return "";
+		}
+		cell=row.getCell(colNum-1);
+		if(cell==null){
+			return "";
+		}
 		switch(cell.getCellType()){		
 		case 0:
 			return String.valueOf(cell.getNumericCellValue());
@@ -162,20 +207,7 @@ public class ExcelClass {
 		default:
 			return "";
 		}
-
-	}
-
-	public String getCellData(String sheetName,int rowNum,int colNum) throws Exception{
-		//String path=System.getProperty("user.dir")+"/src/main/resources/excelFiles/login.xlsx";
-		fis=new FileInputStream(path);
-		wb=WorkbookFactory.create(fis);
-		//wb.getNumberOfSheets();
-		sh=wb.getSheet(sheetName);
-		row=sh.getRow(rowNum-1);
-		cell=row.getCell(colNum-1);
-		String excelValue=cell.getStringCellValue();		
-
-		return excelValue;
+		
 	}
 
 	public void setCellData(String sheetName,int rowNum,int colNum,String dataToPut) throws Exception{

@@ -1,81 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
+    <line>
+      <![CDATA[Output of this Reporter can be seen in test-output folder,index.html  file [TestResult name=reportsTest1 status=STARTED method=TestNGReportsClass.reportsTest1()[pri:1, instance:otherAll.TestNGReportsClass@4cc0edeb] output={null}]]]>
+    </line>
+    <line>
+      <![CDATA[Output of this Reporter can be seen in test-output folder,index.html  file ]]>
+    </line>
   </reporter-output>
-  <suite name="Default suite" duration-ms="83" started-at="2018-02-14T10:17:14Z" finished-at="2018-02-14T10:17:14Z">
+  <suite name="Default suite" duration-ms="65" started-at="2018-02-15T06:59:15Z" finished-at="2018-02-15T06:59:16Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="83" started-at="2018-02-14T10:17:14Z" finished-at="2018-02-14T10:17:14Z">
-      <class name="otherAll.DataProviderValuesFromExcel">
-        <test-method status="PASS" signature="base()[pri:0, instance:otherAll.DataProviderValuesFromExcel@39aeed2f]" name="base" is-config="true" duration-ms="710" started-at="2018-02-14T15:47:13Z" finished-at="2018-02-14T15:47:14Z">
+    <test name="Default test" duration-ms="65" started-at="2018-02-15T06:59:15Z" finished-at="2018-02-15T06:59:16Z">
+      <class name="otherAll.TestNGReportsClass">
+        <test-method status="PASS" signature="reportsTest1()[pri:1, instance:otherAll.TestNGReportsClass@4cc0edeb]" name="reportsTest1" duration-ms="17" started-at="2018-02-15T12:29:16Z" finished-at="2018-02-15T12:29:16Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Output of this Reporter can be seen in test-output folder,index.html  file [TestResult name=reportsTest1 status=STARTED method=TestNGReportsClass.reportsTest1()[pri:1, instance:otherAll.TestNGReportsClass@4cc0edeb] output={null}]]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportsTest1 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:otherAll.TestNGReportsClass@4cc0edeb]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-02-15T12:29:16Z" finished-at="2018-02-15T12:29:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- base -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String)[pri:0, instance:otherAll.DataProviderValuesFromExcel@39aeed2f]" name="test" duration-ms="9" started-at="2018-02-14T15:47:14Z" data-provider="getManyUsers" finished-at="2018-02-14T15:47:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Rahul]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[hjg]]>
-              </value>
-            </param>
-          </params>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="reportsTest()[pri:2, instance:otherAll.TestNGReportsClass@4cc0edeb]" name="reportsTest" duration-ms="6" started-at="2018-02-15T12:29:16Z" finished-at="2018-02-15T12:29:16Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Output of this Reporter can be seen in test-output folder,index.html  file ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- reportsTest -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:otherAll.TestNGReportsClass@4cc0edeb]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-02-15T12:29:16Z" finished-at="2018-02-15T12:29:16Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String)[pri:0, instance:otherAll.DataProviderValuesFromExcel@39aeed2f]" name="test" duration-ms="2" started-at="2018-02-14T15:47:14Z" data-provider="getManyUsers" finished-at="2018-02-14T15:47:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Karan]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[uywuwy]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String)[pri:0, instance:otherAll.DataProviderValuesFromExcel@39aeed2f]" name="test" duration-ms="7" started-at="2018-02-14T15:47:14Z" data-provider="getManyUsers" finished-at="2018-02-14T15:47:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Shanky]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[fdgrth]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String)[pri:0, instance:otherAll.DataProviderValuesFromExcel@39aeed2f]" name="test" duration-ms="6" started-at="2018-02-14T15:47:14Z" data-provider="getManyUsers" finished-at="2018-02-14T15:47:14Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Dude]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[jhygjgk]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- otherAll.DataProviderValuesFromExcel -->
+        </test-method> <!-- afterMethod -->
+      </class> <!-- otherAll.TestNGReportsClass -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

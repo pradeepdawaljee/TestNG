@@ -24,6 +24,16 @@ public class DataProviderValuesFromExcel extends BaseClass {
 		return data.dataProviderGetData("GiveOtherSheet");
 	}
 	
+	@DataProvider(name="OurOwnSomethingName GiveThisName inTest Annotation as dataProvider=name ")
+	public Object[][] getManyUsersOtherSheet1(){
+		
+		//ExcelClass data=new ExcelClass(System.getProperty("user.dir")+"/src/excelFiles/login.xlsx");
+		
+		//data.getCellData(sheetName, rowNum, colNum);
+		
+		return data.dataProviderGetData("GiveOtherSheet");
+	}
+	
 	@Test(dataProvider="getManyUsers")
 	public void test(String username,String password){
 		
