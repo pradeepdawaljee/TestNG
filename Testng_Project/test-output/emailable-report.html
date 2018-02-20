@@ -8,12 +8,41 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">65</td><td></td><td></td></tr>
+<tr><th colspan="7">Grid Execution</th></tr>
+<tr><td><a href="#t0">Remote Chrome Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">15,351</td><td></td><td></td></tr>
+<tr class="stripe"><td><a href="#t1">Remote Firefox Test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">600,057</td><td></td><td></td></tr>
+<tr><th>Total</th><th class="num">1</th><th class="num attn">1</th><th class="num">0</th><th class="num">615,408</th><th colspan="2"></th></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">otherAll.TestNGReportsClass</td><td><a href="#m0">reportsTest</a></td><td rowspan="1">1518677956054</td><td rowspan="1">6</td></tr><tr class="passedeven"><td><a href="#m1">reportsTest1</a></td><td rowspan="1">1518677956029</td><td rowspan="1">17</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Grid Execution</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Remote Chrome Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">basePackage.TestBaseClass</td><td><a href="#m0">testCase1</a></td><td rowspan="1">1519048395276</td><td rowspan="1">5</td></tr></tbody>
+<tbody id="t1"><tr><th colspan="4">Remote Firefox Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">basePackage.TestBaseClass</td><td><a href="#m1">setup</a></td><td rowspan="1">1519048395313</td><td rowspan="1">600029</td></tr><tr><th colspan="4">Remote Firefox Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">basePackage.TestBaseClass</td><td><a href="#m2">tearDown</a></td><td rowspan="1">1519048995361</td><td rowspan="1">0</td></tr><tr><th colspan="4">Remote Firefox Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">basePackage.TestBaseClass</td><td><a href="#m3">testCase1</a></td><td rowspan="1">1519048995358</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">otherAll.TestNGReportsClass#reportsTest</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Output of this Reporter can be seen in test-output folder,index.html  file </div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">otherAll.TestNGReportsClass#reportsTest1</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Output of this Reporter can be seen in test-output folder,index.html  file [TestResult name=reportsTest1 status=STARTED method=TestNGReportsClass.reportsTest1()[pri:1, instance:otherAll.TestNGReportsClass@4cc0edeb] output={null}]</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Remote Chrome Test</h2><h3 id="m0">basePackage.TestBaseClass#testCase1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Remote Firefox Test</h2><h3 id="m1">basePackage.TestBaseClass#setup</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>Windows</td><td>firefox</td><td>50.0</td><td>https://qaapp.moolya.global</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{marionette=true, browserName=firefox, version=50.0, platform=ANY}], required capabilities = Capabilities [{}]
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b32&apos;, time: &apos;2017-03-10 09:04:52 -0800&apos;
+System info: host: &apos;RAKSAN-HP32&apos;, ip: &apos;192.168.0.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_74&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:158)
+	at basePackage.TestBaseClass.getRemoteWebDriverInstance(TestBaseClass.java:52)
+	at basePackage.TestBaseClass.setup(TestBaseClass.java:65)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">basePackage.TestBaseClass#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">basePackage.TestBaseClass#testCase1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{marionette=true, browserName=firefox, version=50.0, platform=ANY}], required capabilities = Capabilities [{}]
+Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b32&apos;, time: &apos;2017-03-10 09:04:52 -0800&apos;
+System info: host: &apos;RAKSAN-HP32&apos;, ip: &apos;192.168.0.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_74&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:158)
+	at basePackage.TestBaseClass.getRemoteWebDriverInstance(TestBaseClass.java:52)
+	at basePackage.TestBaseClass.setup(TestBaseClass.java:65)
+... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Grid Execution" parallel="tests">
+
+	<parameter name="platform" value="Windows"></parameter>
+	<parameter name="browser" value="chrome"></parameter>
+	<parameter name="version" value="50.0"></parameter>
+	<parameter name="url" value="https://qaapp.moolya.global"></parameter>
+
+	<test name="Remote Chrome Test">
+		<classes>
+			<class name="testExecutionPackage.TestCase1"></class>
+		</classes>
+	</test>
+
+	<test name="Remote Firefox Test">
+		<parameter name="browser" value="firefox"></parameter>
+		<parameter name="version" value="50.0"></parameter>
+		<classes>
+			<class name="testExecutionPackage.TestCase1"></class>
+		</classes>
+	</test>
+
+</suite>
