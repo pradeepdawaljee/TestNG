@@ -1,21 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Grid Execution]">
-  <parameter name="browser" value="chrome"/>
-  <parameter name="version" value="50.0"/>
-  <parameter name="platform" value="Windows"/>
-  <parameter name="url" value="https://qaapp.moolya.global"/>
-  <test name="Remote Firefox Test(failed)">
-    <parameter name="browser" value="firefox"/>
-    <parameter name="version" value="50.0"/>
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
-      <class name="basePackage.TestBaseClass">
+      <class name="fileUploadWindowHandle.FileUploadUsingRobot">
         <methods>
-          <include name="tearDown"/>
-          <include name="testCase1"/>
-          <include name="setup"/>
+          <include name="fileUpload"/>
         </methods>
-      </class> <!-- basePackage.TestBaseClass -->
+      </class> <!-- fileUploadWindowHandle.FileUploadUsingRobot -->
     </classes>
-  </test> <!-- Remote Firefox Test(failed) -->
-</suite> <!-- Failed suite [Grid Execution] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

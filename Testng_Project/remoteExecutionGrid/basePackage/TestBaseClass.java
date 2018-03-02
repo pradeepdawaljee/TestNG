@@ -13,7 +13,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
 /* This Block to be saved as grid_node.json and in command prompt use 
- java -jar selenium-server-standalone-2.47.1.jar -role node -nodeConfig grid_node.json 
+ java -jar selenium-server-standalone-2.47.1.jar -role node -nodeConfig grid-node.json 
  Make sure open this file only in IDE's so that format doesn't mess up
 {
 	"capabilities":
@@ -42,11 +42,11 @@ public class TestBaseClass {
 	
 	protected WebDriver driver;
 	
-	public static WebDriver getRemoteWebDriverInstance(String platform,String browser,String version,String url) throws MalformedURLException{
+	public static WebDriver getRemoteWebDriverInstance(String nodeUrl,String platform,String browser,String version,String url) throws MalformedURLException{
 		
 		//String nodeUrl="http://ipAddessewithport/wd/hub";
 		//String nodeUrl="http://192.168.0.137:5555/wd/hub";
-		String nodeUrl="http://192.168.0.108:5555/wd/hub";
+		//String nodeUrl="http://192.168.0.108:5555/wd/hub";
 		WebDriver driver=null;
 		//Platform platform=null;
 		//String version=null;
@@ -78,16 +78,16 @@ public class TestBaseClass {
 		
 		driver.get(url);
 		
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		
 		return driver;
 	}
 	
-	@Parameters({"platform","browser","version","url"})
+	@Parameters({"nodeUrl","platform","browser","version","url"})
 	@BeforeClass
-	public void setup(String platform,String browser,String version,String url) throws MalformedURLException{
-		driver=getRemoteWebDriverInstance(platform, browser, version, url);
+	public void setup(String nodeUrl,String platform,String browser,String version,String url) throws MalformedURLException{
+		driver=getRemoteWebDriverInstance(nodeUrl,platform, browser, version, url);
 	}
 	
 	

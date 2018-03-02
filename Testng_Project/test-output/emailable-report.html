@@ -8,41 +8,46 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">Grid Execution</th></tr>
-<tr><td><a href="#t0">Remote Chrome Test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">15,351</td><td></td><td></td></tr>
-<tr class="stripe"><td><a href="#t1">Remote Firefox Test</a></td><td class="num">0</td><td class="num attn">1</td><td class="num">0</td><td class="num">600,057</td><td></td><td></td></tr>
-<tr><th>Total</th><th class="num">1</th><th class="num attn">1</th><th class="num">0</th><th class="num">615,408</th><th colspan="2"></th></tr>
+<tr><th colspan="7">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">159</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Grid Execution</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Remote Chrome Test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">basePackage.TestBaseClass</td><td><a href="#m0">testCase1</a></td><td rowspan="1">1519048395276</td><td rowspan="1">5</td></tr></tbody>
-<tbody id="t1"><tr><th colspan="4">Remote Firefox Test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">basePackage.TestBaseClass</td><td><a href="#m1">setup</a></td><td rowspan="1">1519048395313</td><td rowspan="1">600029</td></tr><tr><th colspan="4">Remote Firefox Test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">basePackage.TestBaseClass</td><td><a href="#m2">tearDown</a></td><td rowspan="1">1519048995361</td><td rowspan="1">0</td></tr><tr><th colspan="4">Remote Firefox Test &#8212; skipped</th></tr><tr class="skippedeven"><td rowspan="1">basePackage.TestBaseClass</td><td><a href="#m3">testCase1</a></td><td rowspan="1">1519048995358</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">fileUploadWindowHandle.FileUploadUsingRobot</td><td><a href="#m0">fileUpload</a></td><td rowspan="1">1519970170012</td><td rowspan="1">109</td></tr></tbody>
 </table>
-<h2>Remote Chrome Test</h2><h3 id="m0">basePackage.TestBaseClass#testCase1</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h2>Remote Firefox Test</h2><h3 id="m1">basePackage.TestBaseClass#setup</h3><table class="result"><tr class="param"><th>Parameter #1</th><th>Parameter #2</th><th>Parameter #3</th><th>Parameter #4</th></tr><tr class="param stripe"><td>Windows</td><td>firefox</td><td>50.0</td><td>https://qaapp.moolya.global</td></tr><tr><th colspan="4">Exception</th></tr><tr><td colspan="4"><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{marionette=true, browserName=firefox, version=50.0, platform=ANY}], required capabilities = Capabilities [{}]
-Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b32&apos;, time: &apos;2017-03-10 09:04:52 -0800&apos;
-System info: host: &apos;RAKSAN-HP32&apos;, ip: &apos;192.168.0.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_74&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:158)
-	at basePackage.TestBaseClass.getRemoteWebDriverInstance(TestBaseClass.java:52)
-	at basePackage.TestBaseClass.setup(TestBaseClass.java:65)
-... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">basePackage.TestBaseClass#tearDown</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">basePackage.TestBaseClass#testCase1</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.SessionNotCreatedException: Unable to create new remote session. desired capabilities = Capabilities [{marionette=true, browserName=firefox, version=50.0, platform=ANY}], required capabilities = Capabilities [{}]
-Build info: version: &apos;3.3.1&apos;, revision: &apos;5234b32&apos;, time: &apos;2017-03-10 09:04:52 -0800&apos;
-System info: host: &apos;RAKSAN-HP32&apos;, ip: &apos;192.168.0.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_74&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:126)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:141)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:604)
-	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:244)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
-	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:158)
-	at basePackage.TestBaseClass.getRemoteWebDriverInstance(TestBaseClass.java:52)
-	at basePackage.TestBaseClass.setup(TestBaseClass.java:65)
-... Removed 26 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">fileUploadWindowHandle.FileUploadUsingRobot#fileUpload</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.IllegalStateException: The driver executable does not exist: C:\Users\Pradeep\gitTestNg\Testng_Project\Driver\chromedriver.exe
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:518)
+	at org.openqa.selenium.remote.service.DriverService.checkExecutable(DriverService.java:123)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:118)
+	at org.openqa.selenium.chrome.ChromeDriverService.access$000(ChromeDriverService.java:32)
+	at org.openqa.selenium.chrome.ChromeDriverService$Builder.findDefaultExecutable(ChromeDriverService.java:137)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:302)
+	at org.openqa.selenium.chrome.ChromeDriverService.createDefaultService(ChromeDriverService.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:124)
+	at fileUploadWindowHandle.FileUploadUsingRobot.fileUpload(FileUploadUsingRobot.java:19)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:571)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

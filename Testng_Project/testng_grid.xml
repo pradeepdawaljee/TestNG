@@ -1,23 +1,37 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
-<suite name="Grid Execution" parallel="tests">
+<!-- Thread count to be given based on(Equal) maxSessions which is by default 5, -->
+<suite name="Grid Execution" thread-count="2" parallel="tests">
 
 	<parameter name="platform" value="Windows"></parameter>
 	<parameter name="browser" value="chrome"></parameter>
-	<parameter name="version" value="50.0"></parameter>
+	<parameter name="version" value="51.0"></parameter>
 	<parameter name="url" value="https://qaapp.moolya.global"></parameter>
+	
 
-	<test name="Remote Chrome Test">
+	<test name="Remote One Test">
+	    <parameter name="nodeUrl" value="http://192.168.0.107:5555/wd/hub"></parameter>
+		<classes>
+			<class name="testExecutionPackage.TestCase1"></class>
+		</classes>
+	</test>
+	
+	<test name="Remote One Test1">
+	    <parameter name="browser" value="firefox"></parameter>
+	    <parameter name="nodeUrl" value="http://192.168.0.107:5555/wd/hub"></parameter>
+		<classes>
+			<class name="testExecutionPackage.TestCase1"></class>
+		</classes>
+	</test>
+	
+	<test name="Remote Two Test">
+	    <parameter name="browser" value="chrome"></parameter>
+	    <parameter name="version" value="64.0"></parameter>
+		<parameter name="nodeUrl" value="http://192.168.0.58:5555/wd/hub"></parameter>
 		<classes>
 			<class name="testExecutionPackage.TestCase1"></class>
 		</classes>
 	</test>
 
-	<test name="Remote Firefox Test">
-		<parameter name="browser" value="firefox"></parameter>
-		<parameter name="version" value="50.0"></parameter>
-		<classes>
-			<class name="testExecutionPackage.TestCase1"></class>
-		</classes>
-	</test>
+	
 
 </suite>

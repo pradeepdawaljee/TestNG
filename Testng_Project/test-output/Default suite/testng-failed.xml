@@ -3,12 +3,11 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="otherAll.DataProviderValuesFromExcel">
+      <class name="fileUploadWindowHandle.FileUploadUsingRobot">
         <methods>
-          <include name="test"/>
-          <include name="base"/>
+          <include name="fileUpload"/>
         </methods>
-      </class> <!-- otherAll.DataProviderValuesFromExcel -->
+      </class> <!-- fileUploadWindowHandle.FileUploadUsingRobot -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
