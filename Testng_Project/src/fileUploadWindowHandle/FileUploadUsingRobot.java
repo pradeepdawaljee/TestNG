@@ -15,14 +15,17 @@ public class FileUploadUsingRobot {
 
 	@Test
 	public void fileUpload() throws AWTException, InterruptedException{
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Driver/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
 		WebDriver driver=new ChromeDriver();
 		driver.get("https://files.fm/");
+		//driver.manage().window().maximize();
 		driver.findElement(By.xpath(".//*[@id='uploadifive-file_upload']/span[2]")).click();
 		
-		StringSelection path=new StringSelection(System.getProperty("user.dir")+"/src/excelFiles/login.xlsx");
+		String filePath=System.getProperty("user.dir")+"\\src\\excelFiles\\login.xlsx";
+		StringSelection filePathStoreToCopy=new StringSelection(filePath);
 		
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(path, null);
+		System.out.println(System.getProperty("user.dir")+"/src/excelFiles/login.xlsx");
+		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(filePathStoreToCopy, null);
 		
 		Robot robot=new Robot();
 		
