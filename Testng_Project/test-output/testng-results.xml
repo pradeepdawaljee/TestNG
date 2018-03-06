@@ -2,16 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="20661" started-at="2018-03-02T07:00:14Z" finished-at="2018-03-02T07:00:35Z">
+  <suite name="Default suite" duration-ms="19752" started-at="2018-03-06T05:19:03Z" finished-at="2018-03-06T05:19:23Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="20661" started-at="2018-03-02T07:00:14Z" finished-at="2018-03-02T07:00:35Z">
-      <class name="fileUploadWindowHandle.FileUploadUsingRobot">
-        <test-method status="PASS" signature="fileUpload()[pri:0, instance:fileUploadWindowHandle.FileUploadUsingRobot@11438d26]" name="fileUpload" duration-ms="20621" started-at="2018-03-02T12:30:14Z" finished-at="2018-03-02T12:30:35Z">
+    <test name="Default test" duration-ms="19752" started-at="2018-03-06T05:19:03Z" finished-at="2018-03-06T05:19:23Z">
+      <class name="javaScripts.ScrollingElement">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:javaScripts.ScrollingElement@17d677df]" name="setUp" is-config="true" duration-ms="5073" started-at="2018-03-06T10:49:03Z" finished-at="2018-03-06T10:49:08Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fileUpload -->
-      </class> <!-- fileUploadWindowHandle.FileUploadUsingRobot -->
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="openURL()[pri:0, instance:javaScripts.ScrollingElement@17d677df]" name="openURL" duration-ms="14634" started-at="2018-03-06T10:49:08Z" finished-at="2018-03-06T10:49:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openURL -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:javaScripts.ScrollingElement@17d677df]" name="tearDown" is-config="true" duration-ms="19" started-at="2018-03-06T10:49:23Z" finished-at="2018-03-06T10:49:23Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- javaScripts.ScrollingElement -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
