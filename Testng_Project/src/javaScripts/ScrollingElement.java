@@ -12,46 +12,56 @@ import org.testng.annotations.Test;
 public class ScrollingElement {
 
 	WebDriver driver;
-	JavascriptExecutor js;
+	JavascriptExecutor jse;
 	String baseUrl="https://letskodeit.teachable.com/p/practice";
 
 	@BeforeClass
 	public void setUp(){
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
 		driver=new ChromeDriver();
-		js= (JavascriptExecutor)driver;
+		jse= (JavascriptExecutor)driver;
 	}
 
-	@Test
+	@Test(priority=1)
 	public void openURL() throws InterruptedException{
-		js.executeScript("window.location='"+baseUrl+"';");
+		jse.executeScript("window.location='"+baseUrl+"';");
 
 		Thread.sleep(2000);
 
-		js.executeScript("window.scrollBy(0,1500);");//Scroll down. 0 shows horizontal, other vertical
+		jse.executeScript("window.scrollBy(0,1500);");//Scroll down. 0 shows horizontal, other vertical
 
 		Thread.sleep(2000);
 
-		js.executeScript("window.scrollBy(0,-1500);");//Scroll up
+		jse.executeScript("window.scrollBy(0,-1500);");//Scroll up
 
 		Thread.sleep(2000);
 
 		//WebElement element=(WebElement) js.executeScript("return document.getElementById('search-courses');");
 		WebElement element=driver.findElement(By.id("mousehover"));
 		
-		js.executeScript("arguments[0].scrollIntoView(true);",element);
+		jse.executeScript("arguments[0].scrollIntoView(true);",element);
 		
 		Thread.sleep(2000);
 		
-		js.executeScript("window.scrollBy(0,-150);");
+		jse.executeScript("window.scrollBy(0,-150);");
+		
+		Thread.sleep(1000);
 
+	}
+	
+	@Test(priority=2)
+	public void clickUsingJS(){
+		WebElement element=driver.findElement(By.id("bmwradio"));
+		//element.click();
+		jse.executeScript("arguments[0].click();", element); // Use only when .click is not working
+		
 	}
 
 	@AfterClass
 	public void tearDown(){
 		//Getting window size
-		long height=(Long)js.executeScript("return innerHeight;");
-		long width=(Long)js.executeScript("return innerWidth;");
+		long height=(Long)jse.executeScript("return innerHeight;");
+		long width=(Long)jse.executeScript("return innerWidth;");
 		System.out.println("height="+height+" , width="+width);
 	}
 }

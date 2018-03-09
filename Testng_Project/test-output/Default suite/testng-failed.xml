@@ -3,13 +3,12 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="javaScripts.ScrollingElement">
+      <class name="actionsPackage.MouseOverActionsClass">
         <methods>
           <include name="openURL"/>
           <include name="setUp"/>
-          <include name="tearDown"/>
         </methods>
-      </class> <!-- javaScripts.ScrollingElement -->
+      </class> <!-- actionsPackage.MouseOverActionsClass -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
